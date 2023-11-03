@@ -18,7 +18,7 @@ The purpose of the analysis is to build, train and evaluate a model based on loa
 2. From the dataframe, identify the features (X) and target column (y).
 3. Check the balance of the two possible outcomes in the target column (y) using value_counts(). 
 4. Split the dataset into training and testing datasets using train_test_split()
-5. Standardize the feature values using StandarScaler().fit on the training data and then transform the test and training data.
+5. Standardize the feature values using StandarScaler().fit on the training data and then transform the test and training data using transform().
 	  Standardization is done so all the values will be in the same range and help in uniform weight for each feature.
 6. Create a LogisticRegression model with random_state = 1. 
 	  random_state is used to get consistent result each time this model is run.
