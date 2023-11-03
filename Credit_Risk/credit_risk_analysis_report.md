@@ -18,7 +18,7 @@ The purpose of the analysis is to build, train and evaluate a model based on loa
 2. From the dataframe, identify the features (X) and target column (y).
 3. Check the balance of the two possible outcomes in the target column (y) using value_counts(). 
 4. Split the dataset into training and testing datasets using train_test_split()
-5. Standardize the feature values using StandarScaler().fit_transform().
+5. Standardize the feature values using StandarScaler().fit on the training data and then transform the test and training data.
 	  Standardization is done so all the values will be in the same range and help in uniform weight for each feature.
 6. Create a LogisticRegression model with random_state = 1. 
 	  random_state is used to get consistent result each time this model is run.
@@ -39,8 +39,8 @@ The purpose of the analysis is to build, train and evaluate a model based on loa
   This is a Logistic Regression model with resampled data. The sample data has equal number of records for both possible options of the target column.
     - This model has an accuracy of 99% in predicting healthy and high-risk loans.  
     - Precision of 100% and recall of 99% for healthy loans.
-    - Precision of 86% and recall of 100% for high-risk loans.
+    - Precision of 87% and recall of 100% for high-risk loans.
 
 ## Summary
-LogisticRegression model has higher precision in predicting both healthy and high-risk loans than the RandomOverSampler model. So LogisticRegression seems to be a better model of the two.
+Both the models have same accuracy and precision. RandomOverSampler may have overfiitted the data, so to choose one of these two models, will go with LogisticRegression model (Model 1).
 
